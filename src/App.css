@@ -1,42 +1,25 @@
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* slider buttton previous & next  in the Product Slider*/
+
+.slick-slider .slick-next{
+  width: 30px;
+  height: 30px;
+  background-color: rgb(0,0,0);
+  border-radius: 9px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.slick-slider .slick-prev{
+  width: 30px;
+  height: 30px;
+  background-color: rgb(0,0,0);
+  border-radius: 9px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.slick-slider .slick-next:hover{
+  border: 1px solid black;
+  background-color: black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.slick-slider .slick-prev:hover{
+  border: 1px solid black;
+  background-color: black;
 }
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-} */
