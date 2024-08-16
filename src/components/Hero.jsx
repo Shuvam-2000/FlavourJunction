@@ -38,7 +38,7 @@ const Hero = () => {
   return (
     <>
       <div>
-        <div className="w-[90%] mx-auto h-[60vh]">
+        <div className="w-[90%] mx-auto h-[100%] mb-10">
             <img 
             src={imgData[slider].url} 
             alt="image" 
@@ -49,9 +49,9 @@ const Hero = () => {
             <button className="absolute sm:top-[48%] top-[40%] sm:left-[48%] left-[38%] border rounded-lg sm:p-4 p-2 
             border-white font-bold text-white hover:bg-white hover:text-[#f0b056] cursor-pointer" type="button">Order Now</button> 
 
-        <div className="absolute sm:top-1/2 top-1/2 transform -translate-y-1/2  flex justify-between w-full px-5">
+        <div className="absolute sm:top-1/2 top-1/2 transform -translate-y-1/2  flex justify-between w-full px-5 cursor-pointer">
             <FaChevronCircleLeft className="sm:w-[50px] w-[40px]" onClick={handleSlidePlus}/>
-            <FaChevronCircleRight className="sm:w-[50px]w-[40px] mx-2"onClick={handleSlideMinus}/>
+            <FaChevronCircleRight className="sm:w-[50px] w-[40px] mx-2"onClick={handleSlideMinus}/>
           </div>
       </div>
     </>
