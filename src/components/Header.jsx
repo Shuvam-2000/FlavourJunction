@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FaCartShopping } from "react-icons/fa6";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdClose } from "react-icons/md";
+import {  Link } from "react-router-dom";
 
 const Header = () => {
 
@@ -23,10 +24,18 @@ const Header = () => {
 
       <div>
         <ul className='sm:flex gap-9 text-[15px] font-bold py-[6px] hidden border-b'>
+          <Link to='/'>
             <li className="hover:text-[#fabb02]">Home</li>
+          </Link>
+          <Link to='/About Us'>
             <li className="hover:text-[#fabb02]">About Us</li>
-            <li className="hover:text-[#fabb02]"> Explore Menu</li>
+          </Link>
+          <Link to='/Explore Menu'>
+            <li className="hover:text-[#fabb02]">Explore Menu</li>
+          </Link>
+          <Link to='/ Sign In'>
             <li className="hover:text-[#fabb02]">Sign In</li>
+          </Link>
         </ul>
       </div>
       {
@@ -41,10 +50,18 @@ const Header = () => {
           onClick={() => setSideBar(!showSideBar)}/>
 
           <ul className='flex text-[15px] font-bold py-[6px] pt-[12vw] flex-col space-y-20'>
+            <Link to='/'>
               <li className="hover:text-[#fabb02]" onClick={() => setSideBar(!showSideBar)}>Home</li>
+            </Link>
+            <Link to='/About Us'>
               <li className="hover:text-[#fabb02]" onClick={() => setSideBar(!showSideBar)}>About Us</li>
+            </Link>
+            <Link to='/Explore Menu'>
               <li className="hover:text-[#fabb02]" onClick={() => setSideBar(!showSideBar)}>Explore More</li>
+            </Link>
+            <Link to='/ Sign In'>
               <li className="hover:text-[#fabb02]" onClick={() => setSideBar(!showSideBar)}>Sign In</li>
+            </Link>
           </ul>
       </div>
       ) : (
