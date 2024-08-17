@@ -1,7 +1,9 @@
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Header from "./components/Header"
-import Hero from "./components/Hero"
-import Promotion from "./components/Promotion"
-import ProductSlider from "./components/ProductSlider"
+import Home from './components/Home'
+import AboutUS from './components/AboutUS'
+import ExploreMore from './components/ExploreMore'
+import SignIn from './components/SignIn'
 import Footer from "./components/Footer"
 import './App.css'
 
@@ -10,11 +12,16 @@ function App() {
   return (
     <>
     <div>
-      <Header/>
-      <Hero/>
-      <Promotion/>
-      <ProductSlider/>
-      <Footer/>
+    <BrowserRouter>
+        <Header/>
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/aboutus' element={<AboutUS/>}/>
+          <Route path='/exploremore' element={<ExploreMore/>}/>
+          <Route path='/signin' element={<SignIn/>}/>
+        </Routes>
+        <Footer/>
+        </BrowserRouter>
     </div>
     </>
   )
