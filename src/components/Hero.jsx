@@ -1,5 +1,6 @@
 import { FaChevronCircleLeft, FaChevronCircleRight } from "react-icons/fa";
 import { useEffect, useState } from "react";
+import { Link } from 'react-router-dom'
 
 const Hero = () => {
 
@@ -41,13 +42,15 @@ const Hero = () => {
         <div className="w-[90%] mx-auto h-[100%] mb-10">
             <img 
             src={imgData[slider].url} 
-            alt="image" 
-            className="w-full h-[50vh] rounded opacity-9 sm:h-[80vh]"/>
+            alt="slider image" 
+            className="w-full h-[50vh] rounded sm:h-[80vh]"/>
         </div>
-            <h1 className="absolute sm:top-[35%] top-[25%] sm:text-[40px] text-[30px] w-full text-center font-serif sm:text-5xl text-2xl text-slate-200 font-bold">Welcome to <span className="text-black">Flavour</span><span className="text-[#f0b056]">Junction</span></h1>
+            <h1 className="absolute sm:top-[35%] top-[25%] sm:text-[40px] text-[30px] w-full text-center font-serif sm:text-5xl text-2xl text-black font-bold">Welcome to <span className="text-slate-200">Flavour</span><span className="text-[#f0b056]">Junction</span></h1>
 
+            <Link to="/exploremore">
             <button className="absolute sm:top-[48%] top-[40%] sm:left-[48%] left-[38%] border rounded-lg sm:p-4 p-2 
-            border-white font-bold text-white hover:bg-white hover:text-[#f0b056] cursor-pointer" type="button">Order Now</button> 
+            border-white font-bold text-white hover:bg-white hover:text-[#f0b056] cursor-pointer" type="button">Order Now</button>
+            </Link> 
 
         <div className="absolute sm:top-1/2 top-1/2 transform -translate-y-1/2  flex justify-between w-full px-5 cursor-pointer">
             <FaChevronCircleLeft className="sm:w-[50px] w-[40px]" onClick={handleSlidePlus}/>
