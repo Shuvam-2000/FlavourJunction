@@ -27,13 +27,13 @@ const Header = () => {
           <Link to='/'>
             <li className="hover:text-[#fabb02]">Home</li>
           </Link>
-          <Link to='/About Us'>
+          <Link to='/aboutus'>
             <li className="hover:text-[#fabb02]">About Us</li>
           </Link>
-          <Link to='/Explore Menu'>
+          <Link to='/exploremore'>
             <li className="hover:text-[#fabb02]">Explore Menu</li>
           </Link>
-          <Link to='/ Sign In'>
+          <Link to='/signin'>
             <li className="hover:text-[#fabb02]">Sign In</li>
           </Link>
         </ul>
@@ -53,13 +53,13 @@ const Header = () => {
             <Link to='/'>
               <li className="hover:text-[#fabb02]" onClick={() => setSideBar(!showSideBar)}>Home</li>
             </Link>
-            <Link to='/About Us'>
+            <Link to='/aboutus'>
               <li className="hover:text-[#fabb02]" onClick={() => setSideBar(!showSideBar)}>About Us</li>
             </Link>
-            <Link to='/Explore Menu'>
+            <Link to='/exploremore'>
               <li className="hover:text-[#fabb02]" onClick={() => setSideBar(!showSideBar)}>Explore More</li>
             </Link>
-            <Link to='/ Sign In'>
+            <Link to='/signin'>
               <li className="hover:text-[#fabb02]" onClick={() => setSideBar(!showSideBar)}>Sign In</li>
             </Link>
           </ul>
