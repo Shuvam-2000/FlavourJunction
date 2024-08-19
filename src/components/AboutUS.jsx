@@ -99,7 +99,7 @@ const AboutUS = () => {
                 <div className="flex flex-col justify-center items-center gap-2 p-4">
                   <p className="text-xl font-bold">{item.title}</p>
                   <button className="border border-[#fabb02] w-[120px] hover:bg-[#fabb02] hover:text-white text-black
-                  font-bold rounded-md my-6 py-[15px] text-[12px]">Explore</button>
+                  duration-300 font-bold rounded-md my-6 py-[15px] text-[12px]">Explore</button>
                 </div>
               </div>
             ))}
