@@ -61,8 +61,8 @@ const ProductSlider = () => {
                 <div className="flex flex-col justify-center items-center gap-2 p-4">
                   <p className="text-xl font-semibold">{item.title}</p>
                   <p className="text-xl font-semibold">{item.price}</p>
-                  <button className="bg-yellow-500 w-[100px] hover:bg-yellow-600 text-white 
-                  font-semibold rounded-md my-6 py-[15px] text-[12px]">Add To Cart</button>
+                  <button className="border border-[#fabb02] text-black hover:bg-[#fabb02] hover:text-white transition duration-300 
+                  font-semibold rounded-md my-6 py-[15px] text-[12px] w-[100px]">Add To Cart</button>
                 </div>
               </div>
             ))}
