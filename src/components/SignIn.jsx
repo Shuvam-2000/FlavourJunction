@@ -8,7 +8,7 @@ const SigninPage = () => {
       </div>
 
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md w-2vw">
-        <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10 border border-black">
+        <div className="bg-white py-8 px-4 shadow sm:rounded-lg rounded-lg sm:px-10 border border-black">
           <form className="space-y-6 mb-14 mt-10 sm:mb-16">
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700">
