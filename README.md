@@ -1,7 +1,3 @@
-Sure! Here’s a template for your README file that covers the essential aspects of your project:
-
----
-
 # Food Website
 
 Welcome to the Food Website project! This is a responsive single-page application built with React and Tailwind CSS, featuring a range of sections for a seamless user experience. The app is designed to help users browse food options, filter by categories, place orders, and sign in.
@@ -55,11 +51,11 @@ To get started with this project, follow these steps:
 - **Home Section:** Explore the introductory content and navigate to other sections.
 - **About Section:** Learn more about the website's background and purpose.
 - **Food Ordering Section:** Browse food items, use filters to narrow down choices, and place orders.
-- **Sign In Section:** Access account functionalities by signing in.
+- **Sign In Section:** Form Validation functionalities for signing in.
 
 ## Deployment
 
-The project is deployed and hosted on Vercel. You can view the live application [here].
+The project is deployed and hosted on Vercel. You can view the live application [here](https://food-website-with-react-js.vercel.app/).
 
 ## Acknowledgements
 
