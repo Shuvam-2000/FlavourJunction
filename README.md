@@ -1,6 +1,6 @@
 # Food Website
 
-Welcome to the Food Website project! This is a responsive single-page application built with React and Tailwind CSS, featuring a range of sections for a seamless user experience. The app is designed to help users browse food options, filter by categories, place orders, and sign in.
+Welcome to the Food Website project! This is a responsive single-page application built with React and Tailwind CSS, featuring a range of sections for a seamless user experience. The app is designed to help users browse food options, filter by categories, price, and sign in.
 
 ## Features
 
@@ -23,7 +23,7 @@ To get started with this project, follow these steps:
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/your-username/food-website.git
+   git clone https://github.com/Shuvam-2000/food-website.git
    ```
 
 2. **Navigate to the Project Directory:**
@@ -44,7 +44,6 @@ To get started with this project, follow these steps:
    npm run dev
    ```
 
-   Your application will be available at `http://localhost:3000`.
 
 ## Usage
 
@@ -63,3 +62,6 @@ The project is deployed and hosted on Vercel. You can view the live application 
 - **Tailwind CSS:** For the utility-first CSS framework.
 - **Vercel:** For the hosting and deployment service.
 - **React Router DOM:** For managing single-page application routing.
+
+## Tech Stack Used Here
+React!(https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white) ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
