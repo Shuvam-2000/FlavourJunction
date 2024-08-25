@@ -62,6 +62,3 @@ The project is deployed and hosted on Vercel. You can view the live application 
 - **Tailwind CSS:** For the utility-first CSS framework.
 - **Vercel:** For the hosting and deployment service.
 - **React Router DOM:** For managing single-page application routing.
-
-## Tech Stack Used Here
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white) ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
