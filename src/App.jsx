@@ -5,11 +5,13 @@ import AboutUS from './components/AboutUS';
 import ExploreMore from './components/ExploreMore';
 import SignIn from './components/SignIn';
 import Footer from "./components/Footer";
+import ScrollOnTop from './components/ScrollOnTop';
 import './App.css';
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollOnTop/>
       <Header/>
       <Routes>
         <Route path='/' element={<Home/>} />
