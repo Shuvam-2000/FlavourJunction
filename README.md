@@ -8,6 +8,7 @@ Welcome to the Food Website project! This is a responsive single-page applicatio
 - **About Section:** Details information about the food website and its mission.
 - **Food Ordering Section:** Allows users to view food items, apply price and category filters.
 - **Sign In Section:** Enables users to sign in to their accounts for personalized experiences.
+- **Scroll on Top:** Provide a seamless user experience with scroll on top feature
 
 ## Tech Stack
 
