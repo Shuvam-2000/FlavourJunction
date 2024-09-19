@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FaCartShopping } from "react-icons/fa6";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdClose } from "react-icons/md";
-import {  Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
 
@@ -24,18 +24,18 @@ const Header = () => {
 
       <div>
         <ul className='sm:flex gap-9 text-[15px] font-bold py-[6px] hidden border-b'>
-          <Link to='/'>
+          <NavLink to='/'>
             <li className="hover:text-[#fabb02]">Home</li>
-          </Link>
-          <Link to='/aboutus'>
+          </NavLink>
+          <NavLink to='/aboutus'>
             <li className="hover:text-[#fabb02]">About Us</li>
-          </Link>
-          <Link to='/exploremore'>
+          </NavLink>
+          <NavLink to='/exploremore'>
             <li className="hover:text-[#fabb02]">Explore Menu</li>
-          </Link>
-          <Link to='/signin'>
+          </NavLink>
+          <NavLink to='/signin'>
             <li className="hover:text-[#fabb02]">Sign In</li>
-          </Link>
+          </NavLink>
         </ul>
       </div>
       {
@@ -50,18 +50,18 @@ const Header = () => {
           onClick={() => setSideBar(!showSideBar)}/>
 
           <ul className='flex text-[15px] font-bold py-[6px] pt-[12vw] flex-col space-y-20'>
-            <Link to='/'>
+            <NavLink to='/'>
               <li className="hover:text-[#fabb02]" onClick={() => setSideBar(!showSideBar)}>Home</li>
-            </Link>
-            <Link to='/aboutus'>
+            </NavLink>
+            <NavLink to='/aboutus'>
               <li className="hover:text-[#fabb02]" onClick={() => setSideBar(!showSideBar)}>About Us</li>
-            </Link>
-            <Link to='/exploremore'>
+            </NavLink>
+            <NavLink to='/exploremore'>
               <li className="hover:text-[#fabb02]" onClick={() => setSideBar(!showSideBar)}>Explore More</li>
-            </Link>
-            <Link to='/signin'>
+            </NavLink>
+            <NavLink to='/signin'>
               <li className="hover:text-[#fabb02]" onClick={() => setSideBar(!showSideBar)}>Sign In</li>
-            </Link>
+            </NavLink>
           </ul>
       </div>
       ) : (
