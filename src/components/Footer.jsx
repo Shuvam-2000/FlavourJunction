@@ -35,7 +35,9 @@ const Footer = () => {
             <Link to="/exploremore">
               <p className="text-[15px] sm:text-[20px] mb-2 text-[gray] hover:text-[white]">Explore Menu</p>
             </Link>
-              <p className="text-[12px] sm:text-[20px] mb-2 text-[gray] hover:text-[white]">Carriers</p>
+            <Link to="/cartpage">
+              <p className="text-[14px] sm:text-[20px] mb-2 text-[gray] hover:text-[white]">Your Cart</p>
+            </Link>
         </div>
 
         <div className="mx-2 sm:mx-4"> 
