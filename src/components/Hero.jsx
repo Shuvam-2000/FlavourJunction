@@ -45,11 +45,10 @@ const Hero = () => {
             alt="slider image" 
             className="w-full h-[50vh] rounded sm:h-[80vh]"/>
         </div>
-            <h1 className="absolute sm:top-[35%] top-[25%] sm:text-[40px] text-[30px] w-full text-center font-serif sm:text-5xl text-2xl text-black font-bold">Welcome to <span className="text-slate-200">Flavour</span><span className="text-[#f0b056]">Junction</span></h1>
+            <h1 className="absolute sm:top-[35%] top-[25%] sm:text-[40px] text-[30px] w-full text-center font-mono sm:text-5xl text-2xl text-slate-200 font-bold">Welcome to <span className="text-black">Flavour</span><span className="text-[#f0b056]">Junction</span></h1>
 
             <Link to="/exploremore">
-            <button className="absolute sm:top-[48%] top-[40%] sm:left-[48%] left-[38%] border rounded-lg sm:p-4 p-2 
-            border-white font-bold text-white hover:bg-white hover:text-[#f0b056] cursor-pointer" type="button">Order Now</button>
+            <button className="absolute sm:top-[48%] top-[40%] sm:left-[48%] left-[38%] rounded-lg sm:py-4 sm:px-6 py-2 px-4 border border-white text-sm font-bold text-white bg-[#f0b056] cursor-pointer" type="button">Order Now</button>
             </Link> 
 
         <div className="absolute sm:top-1/2 top-1/2 transform -translate-y-1/2  flex justify-between w-full px-5 cursor-pointer">
