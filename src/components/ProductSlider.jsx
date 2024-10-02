@@ -49,8 +49,8 @@ const ProductSlider = () => {
 
   return (
     <>
-      <div className="w-[90%] mx-auto font-serif">
-        <h2 className="font-bold text-4xl text-center">What's on <span className="text-[#fabb02]">your mind?</span></h2>
+      <div className="w-[90%] mx-auto font-mono">
+        <h2 className="font-bold sm:text-4xl text-2xl tracking-wider text-center sm:text-left">What's on <span className="text-[#fabb02]">your mind?</span></h2>
         <div className="py-20">
         <Slider {...settings}>
           {topPicks.map((item) => (
@@ -59,10 +59,11 @@ const ProductSlider = () => {
                 <img src={item.img} alt="slider image" className="w-[200px] rounded-full h-[200px] object-cover"/>
               </div>
                 <div className="flex flex-col justify-center items-center gap-2 p-4">
-                  <p className="text-xl font-semibold">{item.title}</p>
-                  <p className="text-xl font-semibold">{item.price}</p>
-                  <button className="border border-[#fabb02] text-black hover:bg-[#fabb02] hover:text-white transition duration-300 
-                  font-semibold rounded-md my-6 py-[15px] text-[12px] w-[100px]">Add To Cart</button>
+                  <p className="text-xl">{item.title}</p>
+                  <p className="text-xl">{item.price}</p>
+                  <button className="bg-[#fabb02] text-white transition duration-300 font-semibold rounded-md my-4 py-1 px-2 text-xs sm:text-sm w-[150px]">
+                  Add To Cart
+                  </button>
                 </div>
               </div>
             ))}
