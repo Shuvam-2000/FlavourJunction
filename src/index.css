@@ -6,3 +6,7 @@
 a.active li{
     color: #fabb02;
 }
+
+a.active hr{
+    display: block;
+}
