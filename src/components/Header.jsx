@@ -1,20 +1,16 @@
 import { useState } from "react";
-import { FaCartShopping } from "react-icons/fa6";
-import { GiHamburgerMenu } from "react-icons/gi";
 import { MdClose } from "react-icons/md";
 import { NavLink } from "react-router-dom";
+import cart_icon from "../assets/cart_icon.png"
+import menu_icon from "../assets/menu_icon.png"
 
 const Header = () => {
 
   // side navbar 
   const[showSideBar, setSideBar] = useState(false)
 
-  const handlesidebar = () => {
-      setSideBar(!showSideBar)
-    }
-
   return (
-    <div className='flex justify-between py-[15px] px-[20px] bg-[#f1f3f5] border-b font-serif cursor-pointer'>
+    <div className='flex justify-between py-[12px] px-[20px] bg-[#f1f3f5] border-b font-mono cursor-pointer'>
       <div>
         <h1 className='sm:text-3xl text-2xl font-bold'>
         Flavour
@@ -23,18 +19,22 @@ const Header = () => {
       </div>
 
       <div>
-        <ul className='sm:flex gap-9 text-[15px] font-bold py-[6px] hidden border-b'>
+        <ul className='sm:flex gap-9 text-[15px] font-bold text-base py-[6px] hidden'>
           <NavLink to='/'>
             <li className="hover:text-[#fabb02]">Home</li>
+            <hr className="w-3/2 border-none h-[1.5px] bg-[#fabb02] hidden"/>
           </NavLink>
           <NavLink to='/aboutus'>
             <li className="hover:text-[#fabb02]">About Us</li>
+            <hr className="w-3/2 border-none h-[1.5px] bg-[#fabb02] hidden"/>
           </NavLink>
           <NavLink to='/exploremore'>
             <li className="hover:text-[#fabb02]">Explore Menu</li>
+            <hr className="w-3/2 border-none h-[1.5px] bg-[#fabb02] hidden"/>
           </NavLink>
           <NavLink to='/signin'>
             <li className="hover:text-[#fabb02]">Sign In</li>
+            <hr className="w-3/2 border-none h-[1.5px] bg-[#fabb02] hidden"/>
           </NavLink>
         </ul>
       </div>
@@ -45,9 +45,9 @@ const Header = () => {
           className="absolute top-2 left-4 cursor-pointer" 
           onClick={() => setSideBar(!showSideBar)}/>
 
-          <FaCartShopping size="30px" 
+          {/* <FaCartShopping size="30px" 
           className="absolute bottom-40 top-68 mx-8 my-18 hover:text-[#fabb02]" 
-          onClick={() => setSideBar(!showSideBar)}/>
+          onClick={() => setSideBar(!showSideBar)}/> */}
 
           <ul className='flex text-[15px] font-bold py-[6px] pt-[12vw] flex-col space-y-20'>
             <NavLink to='/'>
@@ -65,19 +65,30 @@ const Header = () => {
           </ul>
       </div>
       ) : (
-        "" 
+        null 
       )} 
 
-      <div>
-        <p>
-        <FaCartShopping size="30px" className="hidden sm:block  mb-2 hover:text-[#fabb02]"/>
-        </p>
-        <p>
-        <GiHamburgerMenu size="30px"className="block sm:hidden cursor-pointer" onClick={handlesidebar}/> 
-        </p>
+      <div className="flex items-center gap-4">
+          {/* Cart Icon */}
+          <div className="group relative">
+            <NavLink to='/cart' className="relative">
+              <img src={cart_icon} alt="cart-icon" className="w-4 sm:w-6" />
+              <p className="absolute sm:right-[-5px] right-[-6px] sm:bottom-[-5px] bottom-[-7px] w-4 text-center leading-4 bg-[#fabb02] text-white aspect-square rounded-full text-[8px]">
+                0
+              </p>
+            </NavLink>
+          </div>
+
+          {/* Menu Icon */}
+          <img 
+            src={menu_icon} 
+            alt="menu-icon" 
+            className="sm:w-5 w-4 cursor-pointer sm:hidden" 
+            onClick={() => setSideBar(!showSideBar)} 
+          />
+        </div>
       </div>
-    </div>
-  )
+      )
 }
 
 export default Header;
