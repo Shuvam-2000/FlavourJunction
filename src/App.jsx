@@ -6,6 +6,7 @@ import ExploreMore from './components/ExploreMore';
 import SignIn from './components/SignIn';
 import Footer from "./components/Footer";
 import ScrollOnTop from './components/ScrollOnTop';
+import CartPage from './components/CartPage';
 import './App.css';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path='/aboutus' element={<AboutUS />} />
         <Route path='/exploremore' element={<ExploreMore />} />
         <Route path='/signin' element={<SignIn />} />
+        <Route path='/cartpage' element={<CartPage />} />
       </Routes>
       <Footer />
     </BrowserRouter>
