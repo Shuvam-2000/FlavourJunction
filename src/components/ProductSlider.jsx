@@ -2,6 +2,7 @@ import { topPicks } from "../Data/data.js";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import { useNavigate } from "react-router-dom";
 
 const ProductSlider = () => {
   const settings = {
@@ -47,29 +48,43 @@ const ProductSlider = () => {
     ]
   };
 
+  const navigate = useNavigate()
+
   return (
     <>
       <div className="w-[90%] mx-auto font-mono">
-        <h2 className="font-bold sm:text-4xl text-2xl tracking-wider text-center sm:text-left">What's on <span className="text-[#fabb02]">your mind?</span></h2>
-        <div className="py-20">
-        <Slider {...settings}>
-          {topPicks.map((item) => (
-            <div className="bg-[white] rounded-md" key={item.id}>
-              <div className="flex justify-center items-center rounded-t-xl">
-                <img src={item.img} alt="slider image" className="w-[200px] rounded-full h-[200px] object-cover"/>
-              </div>
-                <div className="flex flex-col justify-center items-center gap-2 p-4">
-                  <p className="text-xl">{item.title}</p>
-                  <p className="text-xl">{item.price}</p>
-                  <button className="bg-[#fabb02] text-white transition duration-300 font-semibold rounded-md my-4 py-1 px-2 text-xs sm:text-sm w-[150px]">
-                  Add To Cart
-                  </button>
+        <h2 className="font-bold sm:text-4xl text-2xl tracking-wider text-center sm:text-left">
+          What's on <span className="text-[#fabb02]">your mind?</span>
+         </h2>
+          <div className="py-20">
+            <Slider {...settings}>
+              {topPicks.map((item) => (
+              <div className="bg-[white] rounded-md" key={item.id}>
+                <div className="flex justify-center items-center rounded-t-xl">
+                  <img
+                    src={item.img}
+                    alt="slider image"
+                    className="w-[200px] rounded-full h-[200px] object-cover"
+                  />
                 </div>
+              <div className="flex flex-col justify-center items-center gap-2 p-4 mb-6">
+                <p className="text-xl">{item.title}</p>
+                <p className="text-xl">{item.price}</p>
               </div>
-            ))}
-            </Slider>
-          </div>
+            </div>
+          ))}
+        </Slider>
+        </div>
+        <div className="flex justify-center">
+          <button
+            onClick={() => navigate('/exploremore')}
+            className="bg-[#fabb02] text-white transition duration-300 font-semibold rounded-md mb-10 py-1 px-2 text-xs sm:text-sm w-[150px]" 
+          >
+            See More
+          </button>
+        </div>
       </div>
+
     </>
   );
 };
