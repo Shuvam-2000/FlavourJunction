@@ -1,5 +1,7 @@
 import { OurFood } from "../Data/ourFood";
 import { useState } from "react";
+import { add } from "../Store/AddToCart.jsx"
+import { useDispatch } from "react-redux";
 
 const ExploreMore = () => {
 
@@ -46,6 +48,12 @@ const ExploreMore = () => {
     const categories = originalFood.filter((item) => item.category === 'pizza');
     setFilterFood(categories);
   };
+
+  const dispatch = useDispatch()
+
+  const addToCart = (FoodItem) => {
+    dispatch(add(FoodItem))
+  }
 
   return (
     <>
@@ -118,21 +126,21 @@ const ExploreMore = () => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-4 py-8 gap-8">
+        <div className="grid md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-4 py-8 gap-8 cursor-pointer">
           {filterFood.map((food) => (
             <div key={food.id} className="flex justify-center flex-col items-center border border-gray-200 rounded-lg shadow-lg hover:scale-110 transition-all duration-500">
               <div className="mt-8">
                 <img
                   src={food.image}
                   alt={food.name}
-                  className="w-[180px] rounded-md h-[160px] object-cover"
+                  className="w-[200px] rounded-md h-[180px] object-cover"
                 />
               </div>
               <div className="flex flex-col items-center font-semibold py-2 gap-2">
                 <p className="text-lg uppercase">{food.name}</p>
                 <p className="text-md text-black">Price: {food.price}</p>
                 <p className="text-sm text-black">Category: {food.category}</p>
-                <button className="bg-[#fabb02] text-white transition duration-300 font-semibold rounded-md my-4 py-1 px-2 text-xs sm:text-sm w-[150px]">
+                <button onClick={() => addToCart(food)} className="bg-[#fabb02] text-white transition duration-300 font-semibold rounded-md my-4 py-1 px-2 text-xs sm:text-sm w-[150px]">
                   Add To Cart
                 </button>
               </div>
