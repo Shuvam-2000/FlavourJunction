@@ -1,8 +1,9 @@
 import { topPicks } from "../Data/data.js";
+import { useNavigate } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import { useNavigate } from "react-router-dom";
+
 
 const ProductSlider = () => {
   const settings = {
@@ -80,7 +81,7 @@ const ProductSlider = () => {
             onClick={() => navigate('/exploremore')}
             className="bg-[#fabb02] text-white transition duration-300 font-semibold rounded-md mb-10 py-1 px-2 text-xs sm:text-sm w-[150px]" 
           >
-            See More
+            See More →
           </button>
         </div>
       </div>
