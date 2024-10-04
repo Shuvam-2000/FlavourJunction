@@ -5,13 +5,18 @@ import { useSelector } from "react-redux";
 import cart_icon from "../assets/cart_icon.png"
 import menu_icon from "../assets/menu_icon.png"
 
+
 const Header = () => {
 
   // state for side navbar in mobile view 
   const[showSideBar, setSideBar] = useState(false)
 
   // add to cart functionality
-  const cartCount = useSelector((state) => state.cart.length);
+  const cartCount = useSelector((state) => state.cart);
+
+  // cart count according to the items quantity in cart
+  const totalQuantity = cartCount.reduce((total, item) => total + item.quantity, 0);
+
 
   return (
     <div className='flex justify-between py-[12px] px-[20px] bg-[#f1f3f5] border-b font-mono cursor-pointer'>
@@ -74,7 +79,7 @@ const Header = () => {
             <NavLink to='/cartpage' className="relative">
               <img src={cart_icon} alt="cart-icon" className="w-4 sm:w-6" />
               <p className="absolute sm:right-[-5px] right-[-6px] sm:bottom-[-5px] bottom-[-7px] w-4 text-center leading-4 bg-[#fabb02] text-white aspect-square rounded-full text-[8px]">
-                {cartCount}
+                {totalQuantity}
               </p>
             </NavLink>
           </div>
