@@ -128,7 +128,7 @@ const ExploreMore = () => {
 
         <div className="grid md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-4 py-8 gap-8 cursor-pointer">
           {filterFood.map((food) => (
-            <div key={food.id} className="flex justify-center flex-col items-center border border-gray-200 rounded-lg shadow-lg hover:scale-110 transition-all duration-500">
+            <div key={food.id} className="flex justify-center flex-col items-center border border-gray-200 rounded-lg shadow-lg sm:hover:scale-110 transition-all duration-500">
               <div className="mt-8">
                 <img
                   src={food.image}
