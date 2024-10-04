@@ -1,6 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
-import { remove } from "../Store/AddToCart";
+import { remove, increment, decrement } from "../Store/AddToCart"; 
 import { useNavigate } from "react-router-dom";
+import { CiCirclePlus } from "react-icons/ci";
+import { CiCircleMinus } from "react-icons/ci";
 
 const CartPage = () => {
   const showFood = useSelector((state) => state.cart);
@@ -9,6 +11,14 @@ const CartPage = () => {
 
   const removeItem = (id) => {
     dispatch(remove({ id }));
+  };
+
+  const incrementItem = (id) => {
+    dispatch(increment({ id }));
+  };
+
+  const decrementItem = (id) => {
+    dispatch(decrement({ id }));
   };
 
   return (
@@ -25,7 +35,7 @@ const CartPage = () => {
             {showFood.map((food) => (
               <div
                 key={food.id}
-                className="flex justify-center flex-col items-center border border-gray-200 rounded-lg shadow-lg hover:scale-110 transition-all duration-500"
+                className="flex justify-center flex-col items-center border border-gray-200 rounded-lg shadow-lg sm:hover:scale-110 transition-all duration-500"
               >
                 <div className="mt-8">
                   <img
@@ -38,6 +48,17 @@ const CartPage = () => {
                   <p className="text-lg uppercase">{food.name}</p>
                   <p className="text-md text-black">Price: {food.price}</p>
                   <p className="text-sm text-black">Category: {food.category}</p>
+                  <div className="flex items-center justify-center gap-4 my-2">
+                    <CiCircleMinus
+                      className="text-2xl cursor-pointer hover:text-[#fabb02] transition duration-200"
+                      onClick={() => decrementItem(food.id)}
+                    />
+                    <p className="text-lg font-semibold text-black">{food.quantity}</p>
+                    <CiCirclePlus
+                      className="text-2xl cursor-pointer hover:text-[#fabb02] transition duration-200"
+                      onClick={() => incrementItem(food.id)}
+                    />
+                  </div>
                   <button
                     onClick={() => removeItem(food.id)}
                     className="bg-[#fabb02] text-white transition duration-300 font-semibold rounded-md my-4 py-1 px-2 text-xs sm:text-sm w-[150px]"
@@ -49,10 +70,10 @@ const CartPage = () => {
             ))}
           </div>
         ) : (
-          <div className="flex flex-col items-center mt-20">
-            <img 
-              src="https://cdn-icons-png.flaticon.com/512/1170/1170627.png" 
-              alt="Empty cart" 
+          <div className="flex flex-col items-center mt-24">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/1170/1170627.png"
+              alt="Empty cart"
               className="w-[200px] h-[200px] mb-6 mt-4"
             />
             <p className="sm:text-2xl text-xl text-gray-600 mb-4">Your Cart is Empty!!</p>
