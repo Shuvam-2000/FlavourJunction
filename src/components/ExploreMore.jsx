@@ -66,7 +66,7 @@ const ExploreMore = () => {
           {/* Filter button for mobile */}
           <div className="sm:hidden mb-4 text-center">
             <button
-              className="border border-[#fabb02] text-black py-2 px-4 rounded-md font-medium hover:bg-[#fabb02] hover:text-white transition duration-300 text-sm"
+              className="border border-[#fabb02] text-white py-2 px-4 rounded-md font-medium bg-[#fabb02] text-sm"
               onClick={toggleFilters}
             >
               {showFilters ? 'Hide Filters' : 'Show Filters'}
@@ -81,43 +81,43 @@ const ExploreMore = () => {
           >
             <div className="flex flex-wrap sm:gap-6 gap-4 justify-evenly sm:overflow-hidden overflow-x-auto">
               <button
-                className="border border-[#fabb02] text-black py-2 px-4 rounded-md font-medium hover:bg-[#fabb02] hover:text-white transition duration-300 text-sm sm:text-base"
+                className="border border-[#fabb02] text-white py-2 px-4 rounded-md font-medium bg-[#fabb02] transition duration-300 text-sm sm:text-base"
                 onClick={allProducts}
               >
                 All Products
               </button>
               <button
-                className="border border-[#fabb02] text-black py-2 px-4 rounded-md font-medium hover:bg-[#fabb02] hover:text-white transition duration-300 text-sm sm:text-base"
+                className="border border-[#fabb02] text-white py-2 px-4 rounded-md font-medium bg-[#fabb02] transition duration-300 text-sm sm:text-base"
                 onClick={filterByTwoHundred}
               >
                 Rs 200
               </button>
               <button
-                className="border border-[#fabb02] text-black py-2 px-4 mx-2 rounded-md font-medium hover:bg-[#fabb02] hover:text-white transition duration-300 text-sm sm:text-base"
+                className="border border-[#fabb02] text-white py-2 px-4 mx-2 rounded-md font-medium bg-[#fabb02] transition duration-300 text-sm sm:text-base"
                 onClick={filterByFourHundred}
               >
                 Rs 600
               </button>
               <button
-                className="border border-[#fabb02] text-black py-2 px-4 rounded-md font-medium hover:bg-[#fabb02] hover:text-white transition duration-300 text-sm sm:text-base"
+                className="border border-[#fabb02] text-white py-2 px-4 rounded-md font-medium bg-[#fabb02] transition duration-300 text-sm sm:text-base"
                 onClick={filterByEightHundred}
               >
                 Rs 850
               </button>
               <button
-                className="border border-[#fabb02] text-black py-2 px-4 rounded-md font-medium hover:bg-[#fabb02] hover:text-white transition duration-300 text-sm sm:text-base"
+                className="border border-[#fabb02] text-white py-2 px-4 rounded-md font-medium bg-[#fabb02] transition duration-300 text-sm sm:text-base"
                 onClick={filterByNineHundred}
               >
                 Rs 900
               </button>
               <button
-                className="border border-[#fabb02] text-black py-2 px-4 rounded-md font-medium hover:bg-[#fabb02] hover:text-white transition duration-300 text-sm sm:text-base"
+                className="border border-[#fabb02] text-white py-2 px-4 rounded-md font-medium bg-[#fabb02] transition duration-300 text-sm sm:text-base"
                 onClick={filterByChicken}
               >
                 Chicken
               </button>
               <button
-                className="border border-[#fabb02] text-black py-2 px-4 rounded-md font-medium hover:bg-[#fabb02] hover:text-white transition duration-300 text-sm sm:text-base"
+                className="border border-[#fabb02] text-white py-2 px-4 rounded-md font-medium bg-[#fabb02] transition duration-300 text-sm sm:text-base"
                 onClick={filterByPizza}
               >
                 Pizza
@@ -128,7 +128,7 @@ const ExploreMore = () => {
 
         <div className="grid md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-4 py-8 gap-8 cursor-pointer">
           {filterFood.map((food) => (
-            <div key={food.id} className="flex justify-center flex-col items-center border border-gray-200 rounded-lg shadow-lg sm:hover:scale-110 transition-all duration-500">
+            <div key={food.id} className="flex justify-center flex-col items-center border border-gray-200 rounded-lg shadow-lg">
               <div className="mt-8">
                 <img
                   src={food.image}
@@ -140,7 +140,7 @@ const ExploreMore = () => {
                 <p className="text-lg uppercase">{food.name}</p>
                 <p className="text-md text-black">Price: {food.price}</p>
                 <p className="text-sm text-black">Category: {food.category}</p>
-                <button onClick={() => addToCart(food)} className="bg-[#fabb02] text-white transition duration-300 font-semibold rounded-md my-4 py-1 px-2 text-xs sm:text-sm w-[150px]">
+                <button onClick={() => addToCart(food)} className="bg-[#fabb02] text-white font-semibold rounded-md my-4 py-1 px-2 text-xs sm:text-sm w-[150px] sm:hover:scale-110 transition-all duration-500">
                   Add To Cart
                 </button>
               </div>
