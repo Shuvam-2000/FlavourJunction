@@ -35,7 +35,7 @@ const CartPage = () => {
             {showFood.map((food) => (
               <div
                 key={food.id}
-                className="flex justify-center flex-col items-center border border-gray-200 rounded-lg shadow-lg sm:hover:scale-110 transition-all duration-500"
+                className="flex justify-center flex-col items-center border border-gray-200 rounded-lg shadow-lg"
               >
                 <div className="mt-8">
                   <img
@@ -61,7 +61,7 @@ const CartPage = () => {
                   </div>
                   <button
                     onClick={() => removeItem(food.id)}
-                    className="bg-[#fabb02] text-white transition duration-300 font-semibold rounded-md my-4 py-1 px-2 text-xs sm:text-sm w-[150px]"
+                    className="bg-[#fabb02] text-white font-semibold rounded-md my-4 py-1 px-2 text-xs sm:text-sm w-[150px] sm:hover:scale-110 transition-all duration-500"
                   >
                     Remove Item
                   </button>
