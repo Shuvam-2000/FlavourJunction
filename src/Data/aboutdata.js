@@ -11,33 +11,13 @@ export const prodcutData = [
     },
     {
         id: 3,
-        title: "CLOUD KITCHEN",
-        url: "https://careers.swiggy.com/assets/img/icons/ic_3.png"
-    },
-    {
-        id: 4,
-        title: "DELIVERY",
-        url: "https://careers.swiggy.com/assets/img/icons/ic_3.png" 
-    },
-    {
-        id: 4,
-        title: "CUSTOMER CARE",
-        url: "https://careers.swiggy.com/assets/img/icons/ic_4.png"
-    },
-    {
-        id: 5,
         title: "CAMPUS",
         url: "https://careers.swiggy.com/assets/img/icons/ic_5.png"
     },
     {
-        id: 6,
+        id: 4,
         title: "CORPORATE SUPPORT",
         url: "https://careers.swiggy.com/assets/img/icons/ic_6.png"
         
     },
-    {
-        id: 7,
-        title: "RETAILERS SUPPORT",
-        url: "https://careers.swiggy.com/assets/img/icons/ic_6.png"
-    }
 ];
