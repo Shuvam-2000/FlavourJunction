@@ -54,7 +54,7 @@ const ProductSlider = () => {
   return (
     <>
       <div className="w-[90%] mx-auto font-mono">
-        <h2 className="font-bold sm:text-4xl text-2xl tracking-wider text-center sm:text-left">
+        <h2 className="font-bold sm:text-4xl text-2xl sm:tracking-wider text-center sm:text-left">
           What's on <span className="text-[#fabb02]">your mind?</span>
          </h2>
           <div className="py-20">
