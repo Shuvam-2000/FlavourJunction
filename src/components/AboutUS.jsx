@@ -45,18 +45,17 @@ const AboutUS = () => {
           <h2 className="sm:text-4xl text-2xl mb-2 font-mono text-center text-gray-900 mt-14 tracking-wider">
             Where Do<span className="text-yellow-500"> We Belong?</span>
           </h2>
-          <p className="text-center mt-5 font-mono sm:tracking-wider text-gray-600">Explore Services We Offer:</p>
+          <p className="text-center mt-5 font-mono sm:tracking-wider text-gray-600">Our Corporate Solutions:</p>
           <div className="py-10">
-            <div className="grid md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-4 py-8 gap-8">
+            <div className="grid md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-2 py-8 gap-8">
               {prodcutData.map((item) => (
-              <div className="bg-[white] cursor-pointer border border-gray-200 rounded-lg shadow-lg hover:scale-110 transition-all duration-500" key={item.id}>
+              <div className="bg-[white] cursor-pointer border border-gray-200 rounded-lg shadow-lg" key={item.id}>
                 <div className="flex justify-center items-center sm:pt-6 pt-6">
                   <img src={item.url} alt="slider image" className="w-[200px] rounded-full h-[200px] object-cover"/>
                 </div>
                 <div className="flex flex-col justify-center items-center gap-2 p-4">
                   <p className="text-xl font-bold">{item.title}</p>
-                  <button className="border border-[#fabb02] w-[120px] hover:bg-[#fabb02] hover:text-white text-black
-                  duration-300 font-bold rounded-md my-6 py-[8px] text-[12px]">Explore</button>
+                  <button className="border w-[120px] bg-[#fabb02] text-white font-bold rounded-md my-6 py-[8px] text-[12px] sm:hover:scale-110 transition-all duration-500">Explore</button>
                 </div>
               </div>
             ))}
