@@ -37,6 +37,10 @@ const Header = () => {
             <li className="hover:text-[#fabb02]">Our Menu</li>
             <hr className="w-3/2 border-none h-[1.5px] bg-[#fabb02] hidden"/>
           </NavLink>
+          <NavLink to='/services'>
+            <li className="hover:text-[#fabb02]">Services</li>
+            <hr className="w-3/2 border-none h-[1.5px] bg-[#fabb02] hidden"/>
+          </NavLink>
           <NavLink to='/aboutus'>
             <li className="hover:text-[#fabb02]">About Us</li>
             <hr className="w-3/2 border-none h-[1.5px] bg-[#fabb02] hidden"/>
@@ -60,6 +64,9 @@ const Header = () => {
             </NavLink>
             <NavLink to='/exploremore'>
               <li className="hover:text-[#fabb02]" onClick={() => setSideBar(!showSideBar)}>Our Menu</li>
+            </NavLink>
+            <NavLink to='/services'>
+              <li className="hover:text-[#fabb02]" onClick={() => setSideBar(!showSideBar)}>Services</li>
             </NavLink>
             <NavLink to='/aboutus'>
               <li className="hover:text-[#fabb02]" onClick={() => setSideBar(!showSideBar)}>About Us</li>
