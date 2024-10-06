@@ -1,6 +1,6 @@
-# Food Website
+# FlavourJunction
 
-Welcome to the Food Website project! This is a responsive single-page application built with React and Tailwind CSS, featuring a range of sections for a seamless user experience. The app is designed to help users browse food options, filter by categories, price, and sign in.
+Welcome to the FlavourJunction! This is a responsive single-page application built with React, Redux and Tailwind CSS, featuring a range of sections for a seamless user experience. The app is designed to help users browse food options, filter by categories, price, add items to cart , view items in cart and increse the quantity of the item as per requirement and sign in.
 
 ## Features
 
