@@ -10,7 +10,6 @@ Welcome to the FlavourJunction! This is a responsive single-page application bui
 - **Services Section:** Showcases what are the services offered by the application
 - **Cart Page:** Displays the item added to the cart by the user
 - **Sign In Section:** Enables users to sign in to their accounts for personalized experiences.
-- **Scroll on Top:** Provide a seamless user experience with scroll on top feature
 
 ## Tech Stack
 
